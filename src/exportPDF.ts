@@ -1,5 +1,5 @@
-const jsPDF = require('jspdf')
-const download = require('downloadjs')
+// const download = require('downloadjs')
+import download from 'downloadjs'
 
 import { PDFDocument } from 'pdf-lib'
 
