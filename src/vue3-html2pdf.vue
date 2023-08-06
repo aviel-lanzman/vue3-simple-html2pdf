@@ -1,5 +1,5 @@
 <script>
-import jsPDF from 'jspdf'
+// import jsPDF from 'jspdf'
 import html2pdf from 'html2pdf.js'
 
 import { h } from 'vue'
@@ -12,7 +12,7 @@ export default {
     },
     filename: {
       type: String,
-      default: 'mypdf-file.pdf',
+      default: 'pdf.pdf',
     },
     readyDownload: {
       type: Boolean,
@@ -49,23 +49,37 @@ export default {
 
       html2pdf().from(el).set(this.options).save(this.filename)
     },
-    async outImageSrc() {
+    // async outImageSrc() {
+    //   const el = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`)
+    //   if (!el) {
+    //     return
+    //   }
+
+    //   const image = await html2pdf().from(el).set(this.options).outputImg()
+
+    //   const outputType = 'blob'
+    //   const pageSize = jsPDF.getPageSize(this.options.jsPDF)
+    //   const x = -2
+    //   const y = -2
+    //   const width = pageSize.width
+    //   const height = pageSize.height
+    //   const doc = new jsPDF(this.options.jsPDF)
+    //   doc.addImage(image.src, 'jpeg', x, y, width, height, '')
+    //   return doc.output(outputType)
+    // },
+    openInNewTab() {
       const el = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`)
       if (!el) {
         return
       }
-
-      const image = await html2pdf().from(el).set(this.options).outputImg()
-
-      const outputType = 'blob'
-      const pageSize = jsPDF.getPageSize(this.options.jsPDF)
-      const x = -2
-      const y = -2
-      const width = pageSize.width
-      const height = pageSize.height
-      const doc = new jsPDF(this.options.jsPDF)
-      doc.addImage(image.src, 'jpeg', x, y, width, height, '')
-      return doc.output(outputType)
+      html2pdf()
+        .from(el)
+        .set(this.options)
+        .toPdf()
+        .get('pdf')
+        .then(function (pdf) {
+          window.open(pdf.output('bloburl'), '_blank')
+        })
     },
   },
   render() {
