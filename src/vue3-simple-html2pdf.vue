@@ -75,7 +75,7 @@ export default {
         class: 'vue3-simple-html2pdf',
         id: `Vue3SimpleHtml2pdf${this.index}`,
       },
-      this.$slots.default()[0]
+      this.$slots.default()
     )
   },
 }
