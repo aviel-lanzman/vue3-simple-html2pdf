@@ -35,7 +35,7 @@ Vue.use(Vue3SimpleHtml2pdf);
 
 ```
 <v-pdf
-  ref="vue3SimpleHtml2pdf"
+  ref="pdf"
   :options="pdfOptions"
   :filename="exportFilename"
 >
@@ -128,12 +128,20 @@ table {
 </style>
 ```
 
-Call start download pdf
+Call start download pdf with Options api
 
 ```
 this.$refs.vue3SimpleHtml2pdf.download()
 ```
 
+Call start download pdf with Composition api
+
+```
+const vue3SimpleHtml2pdf = ref(true)
+const download = () => {
+  vue3SimpleHtml2pdf.value.download()
+}
+```
 
 To break page, use `html2pdf__page-break`
 
@@ -146,11 +154,6 @@ To add page number, use `html2pdf__page-number`
 ```
 <div class="html2pdf__page-number">{{ pageNumber }}</div>
 ```
-
-# Sample result
-
-![alt text](/docs/sample.jpg)
-
 # License
 
 The MIT License
