@@ -2,7 +2,13 @@
   "name": "vue3-simple-html2pdf-test",
   "description": "Export to PDF using vue3 and html2pdf.js",
   "version": "0.0.11",
-  "main": "./src/index.js",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./src/index.mjs",
+      "import": "./src/index.mjs"
+    }
+  },
   "author": "Aviel Lanzman <avielnzmn@gmail.com>",
   "contributors": [
     "Aviel Lanzman <avielnzmn@gmail.com>"
