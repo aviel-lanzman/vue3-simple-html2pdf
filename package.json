@@ -1,5 +1,5 @@
 {
-  "name": "vue3-html2pdf",
+  "name": "vue3-simple-html2pdf-test",
   "description": "Export to PDF using vue3 and html2pdf.js",
   "version": "0.0.10",
   "main": "./src/index.js",
@@ -29,9 +29,6 @@
     "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.9",
-    "@babel/plugin-external-helpers": "^7.22.5",
-    "@babel/preset-env": "^7.22.9",
     "vue": "^3.3.4"
   },
   "bugs": {

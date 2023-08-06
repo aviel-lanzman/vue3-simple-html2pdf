@@ -3,6 +3,4 @@ export const install = function (app) {
   app.component('v-pdf', Vue3Html2pdf)
 }
 
-export default {
-  install,
-}
+export default install

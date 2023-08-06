@@ -11,13 +11,18 @@ https://codesandbox.io/s/vue3-simple-html2pdf-jxy2uz
 # Install
 
 ```
-npm install --save vue3-simple-html2pdf
+npm i vue3-simple-html2pdf-test
+```
+or pnpm
+
+```
+pnpm i vue3-simple-html2pdf-test
 ```
 
 or yarn
 
 ```
-yarn add vue3-simple-html2pdf
+yarn add vue3-simple-html2pdf-test
 ```
 
 # Register component
@@ -29,7 +34,7 @@ Vue.use(Vue3SimpleHtml2pdf);
 # Use component
 
 ```
-<vue3-simple-html2pdf
+<v-pdf
   ref="vue3SimpleHtml2pdf"
   :options="pdfOptions"
   :filename="exportFilename"
@@ -81,7 +86,7 @@ Vue.use(Vue3SimpleHtml2pdf);
   <!-- Break page pdf -->
   <div class="html2pdf__page-break"></div>
 
-</vue3-simple-html2pdf>
+</v-pdf>
 
 ...
 // Props
