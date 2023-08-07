@@ -1,7 +1,7 @@
 {
   "name": "vue3-to-pdf",
   "description": "Export to PDF using vue3 and html2pdf.js",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "./src/index.mjs",
   "exports": {
     ".": {

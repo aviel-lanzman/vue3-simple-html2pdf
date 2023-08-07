@@ -7,30 +7,30 @@
 
 # Install
 
-```
+```bash
 npm i vue3-to-pdf
 ```
 or pnpm
 
-```
+```bash
 pnpm i vue3-to-pdf
 ```
 
 or yarn
 
-```
+```bash
 yarn add vue3-to-pdf
 ```
 
 # Register component
-```
+```js
 import vue3ToPdf from "vue3-to-pdf";
 Vue.use(vue3ToPdf);
 ```
 
 # Use component
 
-```
+```html
 <v-pdf
   ref="pdf"
   :options="pdfOptions"
@@ -87,6 +87,7 @@ Vue.use(vue3ToPdf);
 
 ...
 // Props
+
 pdfOptions = {
   margin: 15,
   image: {
@@ -100,7 +101,7 @@ pdfOptions = {
     orientation: 'p',
   },
 },
-exportFilename: 'my-custom-file.pdf',
+exportFilename: 'my-custom-file.pdf'
 
 ...
 
@@ -127,28 +128,41 @@ table {
 
 Call start download pdf with Options api
 
-```
+```js
 this.$refs.pdf.download()
 ```
 
 Call start download pdf with Composition api
 
-```
+```js
 const pdf = ref(true)
 const download = () => {
   pdf.value.download()
 }
 ```
+Call pdf in new tab with Options api
 
+```js
+this.$refs.pdf.openInNewTab()
+```
+
+Call pdf in new tab with Composition api
+
+```js
+const pdf = ref(true)
+const openInNewTab = () => {
+  pdf.value.openInNewTab()
+}
+```
 To break page, use `html2pdf__page-break`
 
-```
+```html
 <div class="html2pdf__page-break"></div>
 ```
 
 To add page number, use `html2pdf__page-number`
 
-```
+```html
 <div class="html2pdf__page-number">{{ pageNumber }}</div>
 ```
 # License
