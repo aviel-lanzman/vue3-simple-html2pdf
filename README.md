@@ -4,9 +4,6 @@
 - Easy to custom any PDF style because it will be export from real html.
 - Can use custom css style for pdf page using vue style.
 
-# Example sanbox code
-
-https://codesandbox.io/s/vue3-to-pdf
 
 # Install
 
@@ -27,8 +24,8 @@ yarn add vue3-to-pdf
 
 # Register component
 ```
-import Vue3Html2pdf from "vue3-to-pdf";
-Vue.use(Vue3Html2pdf);
+import vue3ToPdf from "vue3-to-pdf";
+Vue.use(vue3ToPdf);
 ```
 
 # Use component
@@ -131,15 +128,15 @@ table {
 Call start download pdf with Options api
 
 ```
-this.$refs.vue3SimpleHtml2pdf.download()
+this.$refs.pdf.download()
 ```
 
 Call start download pdf with Composition api
 
 ```
-const vue3SimpleHtml2pdf = ref(true)
+const pdf = ref(true)
 const download = () => {
-  vue3SimpleHtml2pdf.value.download()
+  pdf.value.download()
 }
 ```
 
