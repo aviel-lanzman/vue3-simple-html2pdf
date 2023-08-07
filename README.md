@@ -1,4 +1,4 @@
-# vue3-simple-html2pdf
+# vue3-to-pdf
 
 - Export and auto download PDF using vue3 and html2pdf.js.
 - Easy to custom any PDF style because it will be export from real html.
@@ -6,29 +6,29 @@
 
 # Example sanbox code
 
-https://codesandbox.io/s/vue3-simple-html2pdf-jxy2uz
+https://codesandbox.io/s/vue3-to-pdf
 
 # Install
 
 ```
-npm i vue3-simple-html2pdf-test
+npm i vue3-to-pdf
 ```
 or pnpm
 
 ```
-pnpm i vue3-simple-html2pdf-test
+pnpm i vue3-to-pdf
 ```
 
 or yarn
 
 ```
-yarn add vue3-simple-html2pdf-test
+yarn add vue3-to-pdf
 ```
 
 # Register component
 ```
-import Vue3SimpleHtml2pdf from "vue3-simple-html2pdf";
-Vue.use(Vue3SimpleHtml2pdf);
+import Vue3Html2pdf from "vue3-to-pdf";
+Vue.use(Vue3Html2pdf);
 ```
 
 # Use component

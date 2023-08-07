@@ -1,11 +1,11 @@
 {
-  "name": "vue3-simple-html2pdf-test",
+  "name": "vue3-to-pdf",
   "description": "Export to PDF using vue3 and html2pdf.js",
-  "version": "0.0.13",
+  "version": "1.0.1",
   "main": "./src/index.mjs",
   "exports": {
     ".": {
-      "require": "./src/index.mjs",
+      "require": "./src/index.js",
       "import": "./src/index.mjs"
     }
   },
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "downloadjs": "^1.4.7",
-    "html2pdf.js": "^0.10.1",
+    "html2pdf.js": " v0.9.3",
     "jspdf": "^2.5.1",
     "pdf-lib": "^1.17.1"
   },
