@@ -31,7 +31,6 @@
   "dependencies": {
     "downloadjs": "^1.4.7",
     "html2pdf.js": " v0.9.3",
-    "jspdf": "^2.5.1",
     "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
