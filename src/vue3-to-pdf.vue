@@ -1,3 +1,9 @@
+<!-- <template>
+  <div class="vue3-simple-html2pdf" :id="`Vue3SimpleHtml2pdf${this.index}`">
+    <slot />
+  </div>
+</template> -->
+
 <script>
 // import jsPDF from 'jspdf'
 import html2pdf from 'html2pdf.js'
@@ -35,11 +41,7 @@ export default {
       },
     },
   },
-  data: function () {
-    return {}
-  },
-  watch: {},
-  computed: {},
+
   methods: {
     download() {
       const el = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`)
@@ -94,6 +96,7 @@ export default {
   },
 }
 </script>
+
 <style>
 .vue3-simple-html2pdf {
   position: relative;
