@@ -11924,7 +11924,7 @@ const ld = {
     },
     filename: {
       type: String,
-      default: "pdf.pdf"
+      default: "filename.pdf"
     },
     readyDownload: {
       type: Boolean,
