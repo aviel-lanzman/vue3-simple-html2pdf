@@ -1,11 +1,4 @@
-<!-- <template>
-  <div class="vue3-simple-html2pdf" :id="`Vue3SimpleHtml2pdf${this.index}`">
-    <slot />
-  </div>
-</template> -->
-
 <script>
-// import jsPDF from 'jspdf'
 import html2pdf from 'html2pdf.js'
 
 import { h } from 'vue'
@@ -18,7 +11,7 @@ export default {
     },
     filename: {
       type: String,
-      default: 'pdf.pdf',
+      default: 'filename.pdf',
     },
     readyDownload: {
       type: Boolean,

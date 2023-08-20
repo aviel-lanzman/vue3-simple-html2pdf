@@ -1,7 +1,7 @@
 {
   "name": "vue3-to-pdf",
   "description": "Export to PDF using vue3 and html2pdf.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "files": [
     "dist"
@@ -21,8 +21,12 @@
   "license": "MIT",
   "keywords": [
     "vue",
+    "vue3",
+    "vue3 pdf",
+    "vue3 to pdf",
+    "pdf vue3",
     "vue html2pdf",
-    "vue3-simple-html2pdf",
+    "vue3-to-pdf",
     "export pdf"
   ],
   "scripts": {
