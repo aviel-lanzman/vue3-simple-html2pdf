@@ -11951,14 +11951,13 @@ const ld = {
     createPdfFromElement() {
       const t = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`);
       return t ? rs().from(t).set(this.options) : alert(`Error!
-no found pdf..`);
+not found pdf..`);
     },
     download() {
-      console.log(this.createPdfFromElement()), this.createPdfFromElement().save(this.filename);
+      this.createPdfFromElement().save(this.filename);
     },
     async blobPdf() {
-      const t = await this.createPdfFromElement().toPdf().get("pdf");
-      return t.output("blob"), console.log(t.output("blob")), t.output("blob");
+      return (await this.createPdfFromElement().toPdf().get("pdf")).output("blob");
     },
     // async outImageSrc() {
     //   const el = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`)
