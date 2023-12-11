@@ -36,13 +36,20 @@ export default {
   },
 
   methods: {
-    download() {
+    createPdfFromElement() {
       const el = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`)
       if (!el) {
-        return
+        return alert('Error!\nnot found pdf..')
       }
 
-      html2pdf().from(el).set(this.options).save(this.filename)
+      return html2pdf().from(el).set(this.options)
+    },
+    download() {
+      this.createPdfFromElement().save(this.filename)
+    },
+    async blobPdf() {
+      const pdf = await this.createPdfFromElement().toPdf().get('pdf')
+      return pdf.output('blob')
     },
     // async outImageSrc() {
     //   const el = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`)

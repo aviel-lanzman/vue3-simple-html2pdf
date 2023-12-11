@@ -11948,9 +11948,17 @@ const ld = {
     }
   },
   methods: {
-    download() {
+    createPdfFromElement() {
       const t = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`);
-      t && rs().from(t).set(this.options).save(this.filename);
+      return t ? rs().from(t).set(this.options) : alert(`Error!
+no found pdf..`);
+    },
+    download() {
+      console.log(this.createPdfFromElement()), this.createPdfFromElement().save(this.filename);
+    },
+    async blobPdf() {
+      const t = await this.createPdfFromElement().toPdf().get("pdf");
+      return t.output("blob"), console.log(t.output("blob")), t.output("blob");
     },
     // async outImageSrc() {
     //   const el = document.getElementById(`Vue3SimpleHtml2pdf${this.index}`)
